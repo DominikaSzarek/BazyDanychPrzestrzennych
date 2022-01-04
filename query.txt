@@ -1,0 +1,1 @@
+INSERT INTO best_customers_402890 SELECT first_name, last_name, email, lat, long FROM customers_402890 WHERE ST_DistanceSpheroid(ST_MakePoint(CAST(lat as REAL),CAST(long as REAL)), ST_MakePoint(41.39988501005976, -75.67329768604034),'SPHEROID["WGS 84", 6378137,298.257223563]') <=50000;
